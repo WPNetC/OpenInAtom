@@ -49,6 +49,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CopyVsixExtensionFiles>True</CopyVsixExtensionFiles>
+    <CopyVsixExtensionLocation>c:\temp\vsix</CopyVsixExtensionLocation>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="OpenInAtomCommand.cs" />
@@ -68,7 +70,10 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="Resources\OpenInAtomCommand.png" />
-    <Content Include="Resources\OpenInAtomCommandPackage.ico" />
+    <Content Include="Resources\OpenInAtomCommandPackage.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="stylesheet.css" />
   </ItemGroup>
   <ItemGroup>
